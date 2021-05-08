@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="my_robot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.047385371885261 -7.75589605952307E-16 -0.0930559935631696"
+        rpy="0 0 0" />
+      <mass
+        value="3.12236517080471" />
+      <inertia
+        ixx="0.121295108305809"
+        ixy="5.34294830600857E-16"
+        ixz="0.0195662603783684"
+        iyy="0.303669234388364"
+        iyz="2.77772596590786E-16"
+        izz="0.374823982635838" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.6 0.6 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_front_wheel">
+    <inertial>
+      <origin
+        xyz="-4.0169E-09 -1.5027E-08 -0.055225"
+        rpy="0 0 0" />
+      <mass
+        value="8.232" />
+      <inertia
+        ixx="0.063006"
+        ixy="-2.0152E-09"
+        ixz="-5.1018E-09"
+        iyy="0.063006"
+        iyz="-8.3454E-09"
+        izz="0.10877" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot/meshes/right_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot/meshes/right_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.2446 0.1953 -0.22035"
+      rpy="0 0 2.5629" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_front_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_back_wheel">
+    <inertial>
+      <origin
+        xyz="8.158E-09 -2.5702E-09 -0.055225"
+        rpy="0 0 0" />
+      <mass
+        value="8.232" />
+      <inertia
+        ixx="0.063006"
+        ixy="-1.1273E-08"
+        ixz="-1.1777E-09"
+        iyy="0.063006"
+        iyz="-4.454E-09"
+        izz="0.10877" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot/meshes/right_back_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot/meshes/right_back_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_back_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.2674 0.1953 -0.22035"
+      rpy="0 0 -1.436" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_back_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_back_wheel">
+    <inertial>
+      <origin
+        xyz="5.1393E-09 -3.0451E-08 -0.055225"
+        rpy="0 0 0" />
+      <mass
+        value="8.232" />
+      <inertia
+        ixx="0.063006"
+        ixy="-1.073E-08"
+        ixz="-2.5405E-09"
+        iyy="0.063006"
+        iyz="-1.2711E-08"
+        izz="0.10877" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot/meshes/left_back_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot/meshes/left_back_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_back_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.2674 0.1953 0.22035"
+      rpy="-3.1416 0 1.9026" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_back_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_front_wheel">
+    <inertial>
+      <origin
+        xyz="5.1393E-09 -3.0451E-08 -0.055225"
+        rpy="0 0 0" />
+      <mass
+        value="8.232" />
+      <inertia
+        ixx="0.063006"
+        ixy="-1.073E-08"
+        ixz="-2.5405E-09"
+        iyy="0.063006"
+        iyz="-1.2711E-08"
+        izz="0.10877" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot/meshes/left_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot/meshes/left_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.2446 0.1953 0.22035"
+      rpy="3.1416 0 0.34104" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_front_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
